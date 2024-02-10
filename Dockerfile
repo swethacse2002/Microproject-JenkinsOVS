@@ -9,8 +9,8 @@ RUN mvn -f /home/app/pom.xml clean package
 # Package stage
 #
 FROM openjdk:17-alpine
-COPY --from=build /home/app/target/SB-PMS-0.0.1-SNAPSHOT.war /usr/local/lib/SB-PMS-0.0.1-SNAPSHOT.war
-ENTRYPOINT ["java","-jar","/usr/local/lib/SB-PMS-0.0.1-SNAPSHOT.war"]
+COPY --from=build /home/app/target/SB-OVS-0.0.1-SNAPSHOT.war /usr/local/lib/SB-OVS-0.0.1-SNAPSHOT.war
+ENTRYPOINT ["java","-jar","/usr/local/lib/SB-OVS-0.0.1-SNAPSHOT.war"]
 
 
 
